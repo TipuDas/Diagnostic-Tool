@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+>
+    <title>Login/Signup</title>
+    <link
+      rel="stylesheet"
+      href="C:\Users\tipud\OneDrive\Documents\SP_test_1\loginstyles.css"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="formbox">
+        <div class="buttonbox">
+          
+          <div id="btn" onclick="btn()"></div>         
+
+           <button type="button" class="toggle-btn" onclick="loginn()">Login</button>
+           <button type="button" class="toggle-btn" onclick="signupp()">Sign Up</button>
+        </div>
+
+          <form class="inputgroup" id="loginn">
+            <input type="text" class="inputfield" placeholder="User ID" required>
+            <input type="password" class="inputfield" placeholder="Password" required>
+            <input type="checkbox" class="checkbox"><span>Remember Password</span>
+            <button type="submit" class= "submitbtn">Login</button>
+            <div class="forgot">Forgot password?</div>
+          </form>
+
+          <form class="inputgroup" id="signupp">
+            <input type="text" class="inputfield" placeholder="User ID" required>
+            <input type="email" class="inputfield" placeholder="Email" required>
+            <input type="password" class="inputfield" placeholder="Password" required>
+            <input type="checkbox" class="checkbox"><span>I agree to the terms & conditions</span>
+            <button type="submit" class= "submitbtn">Sign up</button>
+          </form>
+
+      </div>
+    </div>
+
+      <script>
+        var x = document.getElementById("loginn");
+        var y = document.getElementById("signupp");
+        var z = document.getElementById("btn");
+     
+        function signupp(){
+          x.style.left = "-415px";
+          y.style.left = "35px";
+          z.style.left = "100px";
+        }
+     
+        function loginn(){
+          x.style.left = "35px";
+          y.style.left = "415px";
+          z.style.left = "0px";
+        }
+
+      </script>
+ 
+  </body>
+</html>

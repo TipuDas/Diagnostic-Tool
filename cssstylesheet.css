@@ -1,0 +1,244 @@
+/*Master Styles*/
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*Navigation Bar Styles*/
+
+
+.navwrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #3232ff;
+    height: 30px;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
+    
+    }
+ .left_nav_wrapper{
+     display: flex;
+ }
+
+ .navwrapper >.left_nav_wrapper> div{
+     border-right: 4px solid black;
+     border-collapse: collapse;
+ }
+
+ a{
+     display: block;
+     padding: 0 28px;
+ }
+
+ .left_nav_wrapper >.about{
+     height: 30px;
+     border-bottom: 4px solid transparent;
+     transition: border-bottom 0.5s;
+ }
+ 
+ .left_nav_wrapper >.home{
+    height: 30px;
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+ .left_nav_wrapper a{
+     color: white;
+     text-decoration: none;
+     transition: color 0.5s;
+ }
+
+ .left_nav_wrapper> .about:hover {
+     border-bottom: 1px solid black;
+ }
+
+ 
+ .left_nav_wrapper> .home:hover {
+    border-bottom: 1px solid black;
+}
+
+ .left_nav_wrapper a:hover {
+    color: #CD1FD3;
+ }  
+
+ .enter{
+    height: 30px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+ .enter a{
+     color: white;
+     text-decoration: none;
+     transition: color 0.5s;
+ }
+
+ .enter:hover{
+     border-bottom: 1px solid black;
+ }
+
+ .enter a:hover {
+    color: #CD1FD3;
+ }  
+
+
+ /*Body styles*/
+
+body{
+    background: linear-gradient(to right, blue, #fff);;
+}
+
+h1{
+    font-size: 30px;
+    line-height: 1.4;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-top: 10px;
+    color: azure;
+}
+
+.imageanimator{
+    width: 70%;
+    height: 400px;  
+    position: relative;  
+    left: 430px;
+    top: 208px;
+
+    transform: translate(-50%, -50%);
+    background-image: url('https://images.pexels.com/photos/1076429/pexels-photo-1076429.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-size: 100% 100%;
+    box-shadow: 1px 1px 10px 5px white;
+    animation:slider 15s infinite linear;
+}
+
+@keyframes slider{
+    0%{background-image: url('https://images.pexels.com/photos/1076429/pexels-photo-1076429.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');}
+    20%{background-image: url('https://images.pexels.com/photos/1835016/pexels-photo-1835016.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');}
+    40%{background-image: url('https://images.pexels.com/photos/325468/pexels-photo-325468.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');}
+    60%{background-image: url('https://images.pexels.com/photos/1486974/pexels-photo-1486974.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');}
+    80%{background-image: url('https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');}
+}
+
+.notibar{
+    position: absolute;;
+    width: 28%;
+    height: 399px;
+    top: 110px;
+    left: 865px;
+    border: x solid rgb(20, 36, 100);
+    background-color: #E0FFFF;
+    text-align: center;
+    box-shadow: 1px 1px 10px 5px rgb(109, 155, 230);
+}
+
+ h2{
+    background-color: #0D4F8B;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-top: 10px;
+    color: whitesmoke;
+}
+ 
+marquee{
+    height: 320px; 
+    padding: 10px 10px;  
+}
+
+
+li{
+    text-align: left;
+    border-bottom: 1px solid #afafaf;
+    padding: 2px;
+    padding-right: 2px;
+    text-decoration: none;
+}
+
+button{
+    position: absolute;
+    left: 40%;
+    top: 540px;
+}
+    
+button{    
+    background: none;
+    color: #000;
+    width: 240px;
+    height: 80px;
+    border: 1px solid #338033;
+    font-size: 18px;
+    
+    border-radius: 4px;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+
+button:focus {
+    outline: none;
+}
+
+button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+ 
+
+button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+
+button:hover {
+    background: #338033;
+    cursor: pointer;
+}
+ 
+button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+
+button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
